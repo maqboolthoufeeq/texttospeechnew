@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <title>Number to Words Program</title>
+  </head>
+  <body>
+ 
+
+    <div class="formclass">
+      <h1>Number to Words Program</h1>
+      <form action="checker" method="get">
+        {% csrf_token %}
+        <h3>Enter a Number</h3>
+        <input type="number" name="inputnum" placeholder="Enter Your Text" required><br><br>
+        <button type="submit" name="button">Submit</button>
+        <h5>Note: Enter only absolute value</h5>
+        <h4>You Entered : {{inum}}</h4>
+        <h3>{{flag}}</h3>
+      </form>
+
+      
+    </div>
+    <div class="formclass">
+      Name  : Maqbool Thoufeeq T<br>
+      Phone : +91-9048264453 <br>
+      Email : maqboolthoufeeq.t@gmail.com <br>
+    </div>
+  </body>
+</html>
